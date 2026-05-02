@@ -203,6 +203,7 @@ figcaption {
 
 .map-container iframe {
     filter: grayscale(100%) invert(90%) contrast(120%);
+}
 
 ::-webkit-scrollbar {
     width: 8px;
