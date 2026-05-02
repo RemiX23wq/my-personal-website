@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дмитро Шейко | Особиста сторінка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header class="container">
+        <div class="header-info">
+            <h1>Дмитро Шейко</h1>
+            <p>Email: <a href="mailto:dima.ua.kh@gmail.com">dima.ua.kh@gmail.com</a></p>
+        </div>
+        <button id="theme-toggle">[ Змінити тему ]</button>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>Про мене</h2>
+            <p class="keywords">#Gym #Lazy #Creative</p>
+            <blockquote class="quote">
+                «Буває, що й корова літає»
+                <br><span>— українська приказка</span>
+            </blockquote>
+        </section>
+
+        <section id="moods">
+            <h2>Мій настрій</h2>
+            <div class="mood-grid">
+                <figure>
+                    <img src="images/happy.jpg" alt="Щасливий">
+                    <figcaption>HAPPY</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/sad.jpg" alt="Сумний">
+                    <figcaption>SAD</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/mog.jpg" alt="Зараз">
+                    <figcaption>NOW (MOG)</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Навчання</h2>
+            
+            <div class="semester-controls">
+                <button id="prev-semester" onclick="changeSemester(-1)">&lt; PREV</button>
+                <span id="semester-indicator">Семестр 1</span>
+                <button id="next-semester" onclick="changeSemester(1)">NEXT &gt;</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Дисципліна</th>
+                            <th>Викладач</th>
+                            <th>Оцінка</th>
+                        </tr>
+                    </thead>
+                    <tbody id="semester-1">
+                        <tr><td>Алгоритмізація та програмування</td><td>Сенько А.В.</td><td>90 (A)</td></tr>
+                        <tr><td>Аналітична геометрія</td><td>Морачковська І.О.</td><td>97 (A)</td></tr>
+                        <tr><td>Історія та культура України</td><td>Красіков М.М.</td><td>100 (A)</td></tr>
+                        <tr><td>Математичний аналіз</td><td>Лінник Г.Б.</td><td>90 (A)</td></tr>
+                        <tr><td>Архітектура обчислювальних систем</td><td>Водка О.О.</td><td>96 (A)</td></tr>
+                        <tr><td>Вступ за спеціальністю. Ознайомча практика</td><td>Вязовиченко Ю.А.</td><td>95 (A)</td></tr>
+                        <tr><td>Іноземна мова</td><td>Подольська Я.А.</td><td>100 (A)</td></tr>
+                        <tr><td>Фізичне виховання</td><td>Ширяєва С.В.</td><td>98 (A)</td></tr>
+                    </tbody>
+                    <tbody id="semester-2" class="hidden">
+                        <tr><td>Дискретна математика</td><td>Татарінова О.А.</td><td>100 (A)</td></tr>
+                        <tr><td>Лінійна алгебра</td><td>Морачковська І.О.</td><td>99 (A)</td></tr>
+                        <tr><td>Об'єктно-орієнтоване програмування та проєктування</td><td>Розова Л.В.</td><td>100 (A)</td></tr>
+                        <tr><td>Спеціальні глави вищої математики</td><td>Лінник Г.Б.</td><td>100 (A)</td></tr>
+                        <tr><td>Українська мова (професійного спрямування)</td><td>Писарська Н.В.</td><td>94 (A)</td></tr>
+                        <tr><td>Іноземна мова</td><td>Подольська Я.А.</td><td>100 (A)</td></tr>
+                        <tr><td>Операційні системи</td><td>Мєтєльов В.О.</td><td>99 (A)</td></tr>
+                        <tr><td>Фізичне виховання</td><td>Ширяєва С.В.</td><td>91 (A)</td></tr>
+                    </tbody>
+                    <tbody id="semester-3" class="hidden">
+                        <tr><td>Математична логіка, теорія алгоритмів та структури даних</td><td>Татарінова О.А.</td><td>91 (A)</td></tr>
+                        <tr><td>Математичні методи моделювання та обробки даних</td><td>Іглін С.П.</td><td>95 (A)</td></tr>
+                        <tr><td>Організація баз даних</td><td>Мартиненко Г.Ю.</td><td>98 (A)</td></tr>
+                        <tr><td>Програмування GUI</td><td>Дашкевич А.О.</td><td>100 (A)</td></tr>
+                        <tr><td>Технології програмування</td><td>Шаповалова М.І.</td><td>91 (A)</td></tr>
+                        <tr><td>Іноземна мова</td><td>Рубцова В.В.</td><td>100 (A)</td></tr>
+                        <tr><td>ОК СВУ</td><td>Клименко О.І.</td><td>92 (A)</td></tr>
+                        <tr><td>Правознавство</td><td>Кузьменко О.В.</td><td>90 (A)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="movies">
+            <h2>Топ-5 фільмів та серіалів</h2>
+            <ul class="links-list">
+                <li><a href="https://www.imdb.com/title/tt1190634/" target="_blank">The Boys</a></li>
+                <li><a href="https://www.imdb.com/title/tt4574334/" target="_blank">Stranger Things</a></li>
+                <li><a href="https://www.imdb.com/title/tt1475582/" target="_blank">Sherlock</a></li>
+                <li><a href="https://www.imdb.com/title/tt1556201/" target="_blank">You</a></li>
+                <li><a href="https://www.imdb.com/title/tt1022603/" target="_blank">500 Days of Summer</a></li>
+            </ul>
+        </section>
+
+        <section id="location">
+            <h2>Локація: Хезель (Hesel), Німеччина</h2>
+            <p>Хезель - це невелика громада у Східній Фризії. На відміну від більшості сусідніх територій, які є рівнинними та відкритими, Хезель оточений великими лісовими масивами, що робить його унікальною «зеленою перлиною» регіону.</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38401.76113885488!2d7.564757111246714!3d53.30396030949575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b66dfaa88cb431%3A0x426cf7763007550!2sHesel%2C%20Germany!5e0!3m2!1sen!2sua!4v1700000000000!5m2!1sen!2sua" width="100%" height="250" style="border:1px solid var(--border-color);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Слайд-шоу</h2>
+            <div class="slider">
+                <img id="slider-img" src="images/img1.png" alt="Слайд">
+                <div class="slider-controls">
+                    <button onclick="prevSlide()">&lt; PREV</button>
+                    <button onclick="nextSlide()">NEXT &gt;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p><a href="project.html" class="project-link">_Відкрити 3D-проєкт</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

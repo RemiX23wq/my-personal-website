@@ -1,0 +1,235 @@
+:root {
+    --bg-color: #ececec;
+    --text-color: #050505;
+    --accent-color: #000000;
+    --border-color: #111111;
+    --container-bg: #ffffff;
+    --font-main: 'Times New Roman', Times, serif;
+}
+
+.dark-theme {
+    --bg-color: #050505;
+    --text-color: #f4f4f4;
+    --accent-color: #ffffff;
+    --border-color: #ffffff;
+    --container-bg: #0a0a0a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 20px 0;
+    line-height: 1.4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background-color: var(--container-bg);
+    border: 2px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h1, h2, th {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { 
+    font-size: 1.1rem; 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 5px; 
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 5px 15px;
+    font-family: var(--font-main);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background: var(--text-color);
+    color: var(--container-bg);
+}
+
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-style: dashed;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.keywords {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.quote {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin: 15px 0;
+    font-style: normal;
+    text-align: justify;
+}
+
+.quote span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 2px solid var(--border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--text-color);
+    color: var(--container-bg);
+}
+
+.semester-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    margin-bottom: -2px;
+}
+
+#semester-indicator {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+.mood-grid {
+    display: flex;
+    gap: 10px;
+}
+
+figure {
+    margin: 0;
+    flex: 1;
+    border: 1px solid var(--border-color);
+    padding: 5px;
+}
+
+figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+}
+
+figcaption {
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 5px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2px;
+}
+
+.slider {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+.slider img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(110%);
+    margin-bottom: 10px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map-container iframe {
+    filter: grayscale(100%) invert(90%) contrast(120%);
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--container-bg);
+    border-left: 1px solid var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-color) var(--container-bg);
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .mood-grid {
+        flex-direction: column;
+    }
+}}
